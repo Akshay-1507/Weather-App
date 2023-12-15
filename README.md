@@ -1,1 +1,62 @@
-"# Weather-Application" 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather app</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="1.png" type="image/x-icon">
+</head>
+<body>
+    <div class="box">
+        <div class="search">
+            <input id="input" type="text" placeholder="Enter city name" spellcheck="false">
+            <button type="submit">
+                <img src="search-logo-1.png">
+            </button>
+        </div>
+    <div class="weather">
+        <img src="Weather-Background-PNG.png" class="sunny">
+        <h1 class="temp" id="temp">25°C</h1>
+        <div class="details">
+            <div class="row">
+        <img src="humidity-icon-14.jpg">
+        <h1 class="humidityText">50%</h1>
+        <p class="hum">Humdity</p>
+        <div class="">
+        <img src="humidity-icon-7.png">
+        <h1 class="rainy">15km/h</h1>
+        <p class="rain">Wind Speed</p>
+    </div>
+</div>
+</div>
+<script>
+    const apikey="3eecb1b3574cf5b9356c5beda15d50ec"
+    const apiurl="https://api.openweathermap.org/data/2.5/weather?q="
+    const searchbox=document.querySelector(".search input");
+    const searchbtn=document.querySelector(".search button");
+    async function checkwhether(city){
+        const response = await fetch(apiurl+city+`&appid=${apikey}`);
+        var data = await response.json();
+        console.log(data);
+        //document.getElementById("cityname").innerHTML=data.name;
+    // if(data.name==undefined){
+        // document.getElementById("temp").innerHTML="Enter A Valid city Name";
+    // }
+    // else{
+        document.getElementById("temp").innerHTML=Math.round(data.main.temp)+'°C';
+    // }
+}
+searchbtn.addEventListener("click",()=>{
+    checkwhether(searchbox.value);
+})
+
+    
+    checkwhether();
+</script>
+</div>
+</div>
+    
+    </div>
+</body>
+</html>
