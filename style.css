@@ -1,0 +1,102 @@
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #c26363;
+}
+.box{
+    width: 100%;
+    max-width: 350px;
+    background: linear-gradient(135deg,#00feba,#5b548a);
+    color: #fff;
+    margin: 100px auto 0;
+    border-radius: 30px;
+    padding: 30px 15px;
+    text-align: center;
+}
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search img{
+    width:40px;
+    align-items: center;
+}
+.search input{
+    border: 0;
+    outline: 0;
+    padding: 15px 25px;
+    color: #c0a1a1;
+    background: #d4e1df;
+    border-radius: 300px;
+    flex:1;
+    margin-right: 16px;
+    font-size: 15px;
+
+}
+.search button{
+    outline: 0;
+    border: 0;
+    border-radius: 20px;
+    margin-right: 40px;
+    color: antiquewhite;
+    background: #a5cdc3;
+    padding: 5px 5px;
+    cursor: pointer;
+    
+
+}
+.sunny{
+    width: 170px;
+    margin-top: 10px;
+    align-items: center;
+    position: relative;
+    padding: 20px;
+    
+
+}
+.temp{
+    font-size: 50px;
+    font-weight: 100px;
+    margin-top: -20px;
+}
+.details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    margin-top: 50px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.row img{
+    width: 40px;
+    margin-right: 10px ;
+}
+.row.hum{
+    text-align: center;
+    font-size: 50px;
+    font-weight: 300px;
+}
+.rainy{
+    font-size: large;
+    
+}
+.humidityText{
+    font-size: large;
+}
+.col{
+    display: flex;
+}
+.col img{
+    width: 45px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
